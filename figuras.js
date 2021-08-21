@@ -57,3 +57,49 @@ function areaCirculo (radio){
 
 //console.log("El area del círculo es : " + areaCirculo + "cm^2");
 console.groupEnd();
+
+// Aquí intercactuamos con el HTML
+
+//Calculos Cuadrado
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+}
+
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const area = areaCuadrado(value);
+    alert(area);
+}
+
+// Calculos Triangulo
+function calacularPerimetroTriangulo(){
+    const inputLado1 = document.getElementById("inputLado1");
+    const valueLado1 = inputLado1.value;
+    const inputLado2 = document.getElementById("inputLado2");
+    const valueLado2 = inputLado2.value;
+    const inputBase = document.getElementById("inputBase");
+    const valueBase = inputBase.value;
+    const perimetro = perimetroTriangulo (valueLado1, valueLado2, valueBase);
+    alert (perimetro);
+}
+
+
+function calcularAreaTriangulo(){
+    const inputLado1 = document.getElementById("inputLado1");
+    const valueLado1 = inputLado1.value;
+    const inputLado2 = document.getElementById("inputLado2");
+    const valueLado2 = inputLado2.value;
+    const inputBase = document.getElementById("inputBase");
+    const valueBase = inputBase.value;
+    if ( (valueLado1 === valueLado2) && valueLado1 != valueBase) {
+        const altura = Math.sqrt(valueLado1**2 - valueBase**2/ 4)
+        const area = areaTriangulo (valueBase, altura);
+        alert("Altura = "+ altura );
+        alert("Area ="+ area);
+    }
+}
